@@ -625,7 +625,6 @@ export
 # text output
     dump,
     print,
-    print_shortest,
     println,
     printstyled,
     show,

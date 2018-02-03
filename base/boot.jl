@@ -139,6 +139,7 @@ export
     InterruptException, InexactError, OutOfMemoryError, ReadOnlyMemoryError,
     OverflowError, StackOverflowError, SegmentationFault, UndefRefError, UndefVarError,
     TypeError, ArgumentError, MethodError, AssertionError, LoadError, InitError,
+    UndefKeywordError,
     # AST representation
     Expr, QuoteNode, LineNumberNode,
     # object model functions
@@ -251,6 +252,9 @@ end
 
 struct ArgumentError <: Exception
     msg::AbstractString
+end
+struct UndefKeywordError <: Exception
+    var::Symbol
 end
 
 struct MethodError <: Exception
